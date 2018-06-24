@@ -4,8 +4,8 @@ const { expect } = require('chai');
 
 const isValidUserChoice = require('../is-valid-user-choice');
 
-describe('isValidUserChoice for board of size 3', () => {
-  it('should return false for out of bound choices', () => {
+describe('isValidUserChoice', () => {
+  it('should return false for out of bound choices for board of size 3', () => {
     // Current state of the board
     // 1 | 2 | 3
     // -----------
@@ -22,7 +22,7 @@ describe('isValidUserChoice for board of size 3', () => {
     expect(isValidUserChoice('10000', gameBoard)).to.be.equal(false);
   });
 
-  it('should return true for inbound choices', () => {
+  it('should return true for inbound choices for board of size 3', () => {
     // Current state of the board
     // 1 | 2 | 3
     // -----------
@@ -38,7 +38,7 @@ describe('isValidUserChoice for board of size 3', () => {
     expect(isValidUserChoice('5', gameBoard)).to.be.equal(true);
   });
 
-  it('should return false for already selected choices', () => {
+  it('should return false for already selected choices for board of size 3', () => {
     // Current state of the board
     // 1 | x | x
     // -----------
@@ -55,8 +55,8 @@ describe('isValidUserChoice for board of size 3', () => {
   });
 });
 
-describe('isValidUserChoice for board of size 5', () => {
-  it('should return false for out of bound choices', () => {
+describe('isValidUserChoice', () => {
+  it('should return false for out of bound choices for board of size 5', () => {
     // Current state of the board
     //  1 | 2 | 3 | 4 | 5
     // -------------------
@@ -83,7 +83,7 @@ describe('isValidUserChoice for board of size 5', () => {
     expect(isValidUserChoice('10000', gameBoard)).to.be.equal(false);
   });
 
-  it('should return true for inbound choices', () => {
+  it('should return true for inbound choices for board of size 5', () => {
     // Current state of the board
     //  1 | 2 | 3 | 4 | 5
     // -------------------
@@ -109,7 +109,7 @@ describe('isValidUserChoice for board of size 5', () => {
     expect(isValidUserChoice('25', gameBoard)).to.be.equal(true);
   });
 
-  it('should return false for already selected choices', () => {
+  it('should return false for already selected choices for board of size 5', () => {
     // Current state of the board
     //  o | 2 | 3 | 4 | 5
     // -------------------

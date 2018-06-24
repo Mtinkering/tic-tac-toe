@@ -4,8 +4,8 @@ const { expect } = require('chai');
 
 const isWinning = require('../is-winning');
 
-describe('isWinning for board of size 3', () => {
-  it('should return winning state', () => {
+describe('isWinning', () => {
+  it('should return winning state for board of size 3', () => {
     // Current state of the board
     // x | x | x
     // -----------
@@ -18,7 +18,7 @@ describe('isWinning for board of size 3', () => {
     expect(isWinning(gameBoard, lastMove)).to.be.equal(true);
   });
 
-  it('should return not winning state', () => {
+  it('should return not winning state for board of size 3', () => {
     // Current state of the board
     // 1 | x | x
     // -----------
@@ -31,7 +31,7 @@ describe('isWinning for board of size 3', () => {
     expect(isWinning(gameBoard, lastMove)).to.be.equal(false);
   });
 
-  it('should return winning state by vertical combination', () => {
+  it('should return winning state by vertical combination for board of size 3', () => {
     // Current state of the board
     // x | o | 3
     // -----------
@@ -44,7 +44,7 @@ describe('isWinning for board of size 3', () => {
     expect(isWinning(gameBoard, lastMove)).to.be.equal(true);
   });
 
-  it('should return winning state by diagonal combination', () => {
+  it('should return winning state by diagonal combination for board of size 3', () => {
     // Current state of the board
     // 1 | o | x
     // -----------
@@ -58,8 +58,8 @@ describe('isWinning for board of size 3', () => {
   });
 });
 
-describe('isWinning for board of size 5', () => {
-  it('should return winning state', () => {
+describe('isWinning', () => {
+  it('should return winning state for board of size 5', () => {
     // Current state of the board
     //  1 | 2 | 3 | 4 | 5
     // -------------------
@@ -82,7 +82,7 @@ describe('isWinning for board of size 5', () => {
     expect(isWinning(gameBoard, lastMove)).to.be.equal(true);
   });
 
-  it('should return not winning state', () => {
+  it('should return not winning state for board of size 5', () => {
     // Current state of the board
     //  1 | 2 | 3 | 4 | 5
     // -------------------
@@ -105,7 +105,7 @@ describe('isWinning for board of size 5', () => {
     expect(isWinning(gameBoard, lastMove)).to.be.equal(false);
   });
 
-  it('should return winning state by vertical combination', () => {
+  it('should return winning state by vertical combination for board of size 5', () => {
     // Current state of the board
     //  o | 2 | 3 | 4 | 5
     // -------------------
@@ -128,7 +128,7 @@ describe('isWinning for board of size 5', () => {
     expect(isWinning(gameBoard, lastMove)).to.be.equal(true);
   });
 
-  it('should return winning state by diagonal combination', () => {
+  it('should return winning state by diagonal combination for board of size 5', () => {
     // Current state of the board
     //  o | 2 | 3 | 4 | 5
     // -------------------

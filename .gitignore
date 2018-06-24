@@ -1,3 +1,5 @@
 node_modules
 .vscode
 .DS_Store
+game-logic-bk.js
+input.txt
