@@ -11,13 +11,29 @@
     "eslint-config-prettier": "^2.9.0",
     "eslint-plugin-import": "^2.12.0",
     "mocha": "^5.2.0",
+    "pre-git": "^3.17.1",
     "prettier": "^1.13.5"
   },
   "scripts": {
-    "test": "mocha",
+    "start": "node index.js",
+    "test": "mocha test/*-spec.js",
     "format": "prettier --write '**/*.js'",
-    "lint": "eslint '**/*.js' --quiet"
+    "lint": "eslint '**/*.js' --quiet",
+    "commit": "commit-wizard"
   },
   "author": "Steven Nguyen",
-  "license": "MIT"
+  "license": "MIT",
+  "release": {
+    "analyzeCommits": "simple-commit-message"
+  },
+  "config": {
+    "pre-git": {
+      "commit-msg": "simple",
+      "pre-commit": ["npm test", "npm run lint"],
+      "pre-push": [],
+      "post-commit": [],
+      "post-checkout": [],
+      "post-merge": []
+    }
+  }
 }
