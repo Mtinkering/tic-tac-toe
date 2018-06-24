@@ -77,6 +77,8 @@ function playTheCurrentTurn({ players, numberOfMoves, gameBoard }) {
       // Mark as a valid move
       const currentNumberOfMoves = numberOfMoves + 1;
 
+      // Mark the current position with the player's symbol
+      // NOTE: This modifies the board directly
       /* eslint-disable no-param-reassign */
       gameBoard[i][j] = currentPlayer.symbol;
 
@@ -116,6 +118,7 @@ function promptForPlayer(playerId, callback) {
 Enter name for Player ${playerId}:
 >> `,
     answer => {
+      // Ignore whitespace, tab and newline
       if (answer.trim()) {
         callback(answer);
       } else {
@@ -139,9 +142,11 @@ function promptForBoardSize(callback) {
 >> `,
     answer => {
       // Check if digits
+      // Else prompt again
       if (/^\d+$/.test(answer.trim())) {
         const size = Number.parseInt(answer, 10);
 
+        // Can't play with size less than 3
         if (size < 3) {
           process.stdout.write('Size must be at least 3!\n\n');
           promptForBoardSize(callback);
