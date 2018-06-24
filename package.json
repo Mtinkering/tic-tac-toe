@@ -1,8 +1,8 @@
 {
-  "name": "zendesk-2018",
+  "name": "tic-tac-toe",
   "version": "1.0.0",
-  "description": "",
-  "main": ".eslintrc.js",
+  "description": "Simple tic tac toe nodejs command line game",
+  "main": "index.js",
   "dependencies": {},
   "devDependencies": {
     "chai": "^4.1.2",
@@ -18,6 +18,6 @@
     "format": "prettier --write '**/*.js'",
     "lint": "eslint '**/*.js' --quiet"
   },
-  "author": "",
-  "license": "ISC"
+  "author": "Steven Nguyen",
+  "license": "MIT"
 }
